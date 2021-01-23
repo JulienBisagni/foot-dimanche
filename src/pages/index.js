@@ -6,7 +6,7 @@ const SEO = loadable(() => import('../components/SEO'));
 export default function Home({ data }) {
   return (
     <>
-      This is foot-dimanche
+      This is foot-dimanche site
       <SEO />
     </>
   );
