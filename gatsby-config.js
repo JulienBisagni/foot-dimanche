@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Boilerplate',
-        short_name: 'Boilerplate',
+        name: 'FootDimanche',
+        short_name: 'FootDimanche',
         start_url: '/',
         background_color: '#FFFFFF',
         theme_color: '#111111',
