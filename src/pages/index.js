@@ -6,7 +6,7 @@ const SEO = loadable(() => import('../components/SEO'));
 export default function Home({ data }) {
   return (
     <>
-      This is a boiler plate page
+      This is foot-dimanche
       <SEO />
     </>
   );
