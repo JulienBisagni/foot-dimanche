@@ -3,7 +3,7 @@ module.exports = [{
       options: {"plugins":[]},
     },{
       plugin: require('../node_modules/gatsby-plugin-manifest/gatsby-browser.js'),
-      options: {"plugins":[],"name":"Boilerplate","short_name":"Boilerplate","start_url":"/","background_color":"#FFFFFF","theme_color":"#111111","display":"minimal-ui","icon":"static/favicon.ico","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"3a318e3ceb32f2e06b497c0795ae14cb"},
+      options: {"plugins":[],"name":"FootDimanche","short_name":"FootDimanche","start_url":"/","background_color":"#FFFFFF","theme_color":"#111111","display":"minimal-ui","icon":"static/favicon.ico","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"3a318e3ceb32f2e06b497c0795ae14cb"},
     },{
       plugin: require('../node_modules/gatsby-remark-images/gatsby-browser.js'),
       options: {"plugins":[],"maxWidth":1200,"linkImagesToOriginal":true,"showCaptions":false,"markdownCaptions":false,"sizeByPixelDensity":false,"backgroundColor":"white","quality":50,"withWebp":false,"tracedSVG":false,"loading":"lazy","disableBgImageOnAlpha":false,"disableBgImage":false},
@@ -15,7 +15,7 @@ module.exports = [{
       options: {"plugins":[]},
     },{
       plugin: require('../node_modules/gatsby-plugin-layout/gatsby-browser.js'),
-      options: {"plugins":[],"component":"/Users/julien/code/JulienBisagni/gatsby-boilerplate/src/components/Layout.js"},
+      options: {"plugins":[],"component":"/Users/julien/code/JulienBisagni/foot-dimanche/src/components/Layout.js"},
     },{
       plugin: require('../node_modules/gatsby-plugin-typography/gatsby-browser.js'),
       options: {"plugins":[],"pathToConfigModule":"src/utils/typography"},

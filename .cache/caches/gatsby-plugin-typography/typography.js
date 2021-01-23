@@ -1,1 +1,1 @@
-module.exports = require("/Users/julien/code/JulienBisagni/gatsby-boilerplate/src/utils/typography")
+module.exports = require("/Users/julien/code/JulienBisagni/foot-dimanche/src/utils/typography")
