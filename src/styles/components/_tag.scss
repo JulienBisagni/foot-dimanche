@@ -1,0 +1,16 @@
+.tags {
+}
+.tag {
+    @extend %transition;
+    font-size: $font-size-tag;
+    padding: $gutter-size/6 $gutter-size/4;
+    background-color: $color-1;
+    color: $color-text;
+    border-radius: $border-radius-button;
+    text-align: center;
+    margin-bottom: $gutter-size/4;
+    width: max-content;
+    &:hover {
+        background-color: $color-3;
+    }
+}

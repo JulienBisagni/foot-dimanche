@@ -1,0 +1,4 @@
+.articles {
+    @include grid($justify-items: center);
+    grid-template-columns: repeat(auto-fill, minmax($width-card, 1fr));
+}

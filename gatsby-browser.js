@@ -3,10 +3,10 @@ import React from 'react';
 import './src/styles/app.scss';
 
 import { QueryParamProvider } from 'use-query-params';
-import { Provider } from './src/contexts/Provider';
+import { SearchProvider } from './src/hooks/useSearch';
 
 export const wrapRootElement = ({ element }) => (
   <QueryParamProvider>
-    <Provider>{element}</Provider>
+    <SearchProvider>{element}</SearchProvider>
   </QueryParamProvider>
 );

@@ -12,3 +12,7 @@
 %transition {
     transition: all $anim-time $anim-curve;
 }
+
+%border-radius {
+    border-radius: $border-radius-card;
+}

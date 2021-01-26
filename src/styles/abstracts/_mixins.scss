@@ -13,8 +13,9 @@
     flex-direction: $flex-direction;
 }
 
-@mixin align-horizontally($position: absolute, $bottom: 0) {
+@mixin align-horizontally($position: absolute, $top: unset, $bottom: unset) {
     position: $position;
+    top: $top;
     bottom: $bottom;
     left: 50%;
     transform: translateX(-50%);

@@ -1,10 +1,21 @@
 const path = require(`path`);
+require('dotenv').config({
+  path: `.env`,
+});
 
 module.exports = {
   siteMetadata: {
     siteUrl: 'http://localhost:8000',
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_TOKEN_DELIVERY,
+        downloadLocal: true,
+      },
+    },
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-netlify',

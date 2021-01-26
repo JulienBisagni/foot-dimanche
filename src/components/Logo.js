@@ -2,5 +2,9 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 export default function Logo() {
-  return <Link to='/'>Logo</Link>;
+  return (
+    <Link to='/' className='logo'>
+      Footdimanche
+    </Link>
+  );
 }

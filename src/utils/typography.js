@@ -17,7 +17,7 @@ const typography = new Typography({
     },
   ],
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
-    body: { color: variables.colorText },
+    body: { fontSize: variables.fontSizeParagraph, color: variables.colorText },
     p: { fontSize: variables.fontSizeParagraph, lineHeight: 1.1 },
     h1: {
       fontSize: variables.fontSizeTitle,

@@ -16,6 +16,7 @@ import {
   MdSend,
   MdCheckCircle,
   MdClose,
+  MdReorder,
 } from 'react-icons/md';
 
 export default function Cart({ icon, additionalClassName }) {
@@ -50,10 +51,10 @@ export default function Cart({ icon, additionalClassName }) {
       return <MdSend className={`icon ${additionalClassName}`} />;
     case 'send_circle':
       return <MdCheckCircle className={`icon ${additionalClassName}`} />;
-    case 'pizza_outline':
-      return <IoPizzaOutline className={`icon ${additionalClassName}`} />;
     case 'close':
       return <MdClose className={`icon ${additionalClassName}`} />;
+    case 'reorder':
+      return <MdReorder className={`icon ${additionalClassName}`} />;
     default:
       return <MdInfo className={`icon ${additionalClassName}`} />;
   }

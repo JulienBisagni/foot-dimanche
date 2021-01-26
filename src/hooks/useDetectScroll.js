@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 export const useDetectScroll = (pixelsToScroll) => {
   // DETECT USER SCROLLING TO ADD BLURRED BG BEHIND THE NAVBAR
@@ -6,7 +6,8 @@ export const useDetectScroll = (pixelsToScroll) => {
   const handleScroll = () => {
     setScroll(window.scrollY > pixelsToScroll);
   };
-  useEffect(() => {
+
+  useLayoutEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);

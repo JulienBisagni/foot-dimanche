@@ -83,6 +83,15 @@ Button {
             box-shadow: none;
         }
     }
+
+    &.--icon {
+        padding: 0;
+        box-shadow: none;
+        margin-left: $gutter-size/6;
+        &:focus {
+            outline: none;
+        }
+    }
     &__row {
         @include flexbox();
         .btn {

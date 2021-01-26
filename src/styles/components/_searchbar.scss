@@ -1,0 +1,26 @@
+.searchbar {
+    @include flexbox();
+    &__icon {
+        font-size: $font-size-icon-big;
+        color: $color-2-20;
+    }
+    &__input {
+        @extend %transition;
+        width: $width-button;
+        border-radius: $border-radius-button;
+        background-color: transparent;
+        border: none;
+        transform: translateX($width-button);
+        padding-left: $gutter-size/6;
+        color: $color-text-light;
+        &:focus {
+            outline: none;
+        }
+    }
+    &.--active {
+        .searchbar__input {
+            transform: translateX(0px);
+            background-color: $color-2-5;
+        }
+    }
+}

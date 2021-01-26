@@ -1,0 +1,13 @@
+.navbar {
+    @include flexbox($justify-content: space-between);
+    @include align-horizontally($position: fixed, $top: 0);
+    @extend %transition;
+    background-color: $color-1;
+    height: $height-navbar;
+    padding: $gutter-size;
+    z-index: $z-index-navbar;
+    &.--scroll {
+        height: calc(#{$height-navbar} - #{$gutter-size});
+        @include blurry();
+    }
+}

@@ -22,9 +22,6 @@ var plugins = [{
     },{
       plugin: require('/Users/julien/code/JulienBisagni/foot-dimanche/node_modules/gatsby-plugin-offline/gatsby-ssr'),
       options: {"plugins":[]},
-    },{
-      plugin: require('/Users/julien/code/JulienBisagni/foot-dimanche/gatsby-ssr'),
-      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

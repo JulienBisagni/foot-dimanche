@@ -1,3 +1,17 @@
 .layout {
     display: block;
 }
+
+.container {
+    width: $width-container;
+    margin: 0 auto;
+    box-shadow: $box-shadow-container;
+    padding: $gutter-size;
+    &.--main {
+        @extend %border-radius;
+        background-color: $color-2-5;
+        margin-top: calc(#{$height-navbar} + #{$gutter-size});
+        height: 100vh;
+        overflow: auto;
+    }
+}

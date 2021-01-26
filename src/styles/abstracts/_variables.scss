@@ -1,24 +1,36 @@
 // COLORS
 $color-1: #ffffff;
 $color-2: #111111;
+$color-3: #f9dc5c;
 $color-text: #2b2d42;
 
 $color-1-100: $color-1;
 $color-2-100: $color-2;
 $color-2-20: rgba($color-2, 0.2);
+$color-2-5: rgba($color-2, 0.05);
+$color-text-light: rgba($color-text, 0.25);
 
 // SIZES
-$width-container: 100rem;
+$gutter-size: 3.2rem;
+
+$width-container: 80rem;
+$width-card: 15rem;
 $width-logo: 4rem;
 $width-button: 14rem;
-$gutter-size: 3.2rem;
+
+$height-card: 30rem;
+$height-navbar: 10rem;
 
 // FONTS
 $font-size-caption: 1rem;
+$font-size-tag: 1.2rem;
 $font-size-button: 1.4rem;
+$font-size-card: 1.4rem;
 $font-size-paragraph: 1.6rem;
 $font-size-subtitle: 1.8rem;
+$font-size-card-title: 2rem;
 $font-size-icon: 2.2rem;
+$font-size-icon-big: 2.4rem;
 $font-size-title: 3.2rem;
 $font-size-big-title: 4.8rem;
 
@@ -26,11 +38,12 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 
 // Z-INDEXES
-$z-index-header: 2;
+$z-index-navbar: 2;
 $z-index-button-scroll-to-top: 3;
 
 // BORDERS && BOX SHADOWS
 $border-radius-button: 0.4rem;
+$border-radius-card: 0.6rem;
 $border-radius-container: 0.8rem;
 $border: 0.1rem solid $color-2-20;
 $box-shadow-container: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -46,6 +59,12 @@ $opacity-hover: 0.8;
 // ANIMATIONS
 $anim-curve: ease-in;
 $anim-time: 0.2s;
+
+// **********************************************
+// *                FILTERS                     *
+// **********************************************
+$brightness-darker-soft: 0.6;
+$brightness-darker-hard: 0.8;
 
 // **********************************************
 // *                BREAKPOINTS                 *
@@ -66,6 +85,7 @@ $desktop-medium: 1260px;
 // **********************************************
 $border-primary: 1px solid $color-1;
 $border-link: 1px solid $color-text;
+$border-transparent: 1px solid transparent;
 
 // EXPORTS
 :export {

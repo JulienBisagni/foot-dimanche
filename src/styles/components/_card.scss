@@ -1,0 +1,38 @@
+.card {
+    @extend %border-radius;
+    overflow: hidden;
+    position: relative;
+    height: $height-card;
+    width: $width-card;
+    background-color: $color-2;
+    box-shadow: $box-shadow-container;
+    color: $color-text;
+    font-size: $font-size-card;
+    &__content {
+        @include position-absolute(unset, unset, 0, 0);
+        padding: $gutter-size/3;
+        padding-bottom: $gutter-size;
+    }
+    &__title {
+        font-weight: bold;
+        line-height: 1.2;
+        color: $color-1;
+    }
+    &__tags {
+        @extend %transition;
+        transform: translate(-100%);
+    }
+    &__image {
+        @extend %border-radius;
+        filter: brightness($brightness-darker-hard);
+        height: 100%;
+    }
+    &:hover {
+        .card__image {
+            filter: brightness($brightness-darker-soft);
+        }
+        .card__tags {
+            transform: translate(0);
+        }
+    }
+}
