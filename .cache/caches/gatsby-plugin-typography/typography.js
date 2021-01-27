@@ -1,1 +1,0 @@
-module.exports = require("/Users/julien/code/JulienBisagni/foot-dimanche/src/utils/typography")

@@ -42,6 +42,8 @@
     "gatsby-remark-smartypants": "^2.7.0",
     "gatsby-source-contentful": "^4.5.1",
     "gatsby-source-filesystem": "^2.8.1",
+    "gatsby-source-shopify": "^3.9.0",
+    "gatsby-source-shopify-storefront": "^1.0.0",
     "gatsby-transformer-remark": "^2.13.1",
     "gatsby-transformer-sharp": "^2.9.0",
     "node-sass": "^5.0.0",
@@ -53,6 +55,7 @@
     "react-spring": "^8.0.27",
     "react-typography": "^0.16.19",
     "reading-time": "^1.2.1",
+    "shopify-buy": "^2.11.0",
     "typography": "^0.16.19",
     "use-query-params": "^1.1.9"
   },

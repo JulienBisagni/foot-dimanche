@@ -6,6 +6,9 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     siteUrl: 'http://localhost:8000',
+    title: `Footdimanche`,
+    description: `Foot and clothing`,
+    author: `@johndomenico`,
   },
   plugins: [
     {
@@ -14,6 +17,19 @@ module.exports = {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
         accessToken: process.env.CONTENTFUL_TOKEN_DELIVERY,
         downloadLocal: true,
+      },
+    },
+    {
+      resolve: 'gatsby-source-shopify-storefront',
+      options: {
+        // Your Shopify instance name (e.g. 'shopify-store-name',
+        // if your shopify shop is located at https://shopify-store-name.myshopify.com/)
+        siteName: process.env.SHOPIFY_SHOP_NAME,
+        // Your Shopify Storefront API access token
+        // generated in the private apps section of your store admin.
+        // Refer to Shopify's Storefront API Documentation for more information
+        // https://help.shopify.com/api/storefront-api/getting-started
+        accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
       },
     },
     `gatsby-plugin-scroll-reveal`,
@@ -143,6 +159,11 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
-    `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/product/*`, `/collection/*`, `/`],
+      },
+    },
   ],
 };
