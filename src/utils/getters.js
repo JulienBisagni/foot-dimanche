@@ -24,3 +24,24 @@ export const getTruncateString = (str, num) => {
   }
   return str.slice(0, num) + '...';
 };
+
+export const getPrice = (price, checkout) =>
+  Intl.NumberFormat(undefined, {
+    currency: checkout.currencyCode ? checkout.currencyCode : 'EUR',
+    minimumFractionDigits: 2,
+    style: 'currency',
+  }).format(parseFloat(price ? price : 0));
+
+export const getListFromTwoArrays = (arr1, arr2) => {
+  const finalList = [];
+  [...arr1, ...arr2].map((element, i) => {
+    if (arr1[i]) {
+      finalList.push(arr1[i]);
+    }
+
+    if (arr2[i]) {
+      finalList.push(arr2[i]);
+    }
+  });
+  return finalList;
+};

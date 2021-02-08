@@ -2,7 +2,6 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
 @import "abstracts/placeholders";
-@import "abstracts/global";
 
 //Main websites components
 @import "components/layout";
@@ -12,8 +11,19 @@
 @import "components/logo";
 @import "components/searchbar";
 @import "components/articles";
+@import "components/products";
 @import "components/card";
 @import "components/tag";
+@import "components/cart";
+@import "components/cart-item";
+@import "components/input-quantity";
+@import "components/input-select";
+
+//Main layout components
+@import "layout/global";
+@import "layout/grid";
+@import "layout/image-grid";
+@import "layout/slider";
 
 //Pages
 @import "pages/404";

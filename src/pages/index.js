@@ -1,34 +1,57 @@
 import React from 'react';
 import loadable from '@loadable/component';
+import { graphql } from 'gatsby';
+
+import { useSearch } from '../hooks/useSearch';
+import { getListFromTwoArrays } from '../utils/getters';
 
 const SEO = loadable(() => import('../components/SEO'));
-const Articles = loadable(() => import('../components/Articles'));
+const Grid = loadable(() => import('../components/Grid'));
 
 export default function Home({ data }) {
-  const articles = data.allContentfulBlogPost.nodes;
+  const articles = data.articles.nodes;
+  const products = data.products.nodes;
+  console.log(products);
+  const { list } = useSearch(getListFromTwoArrays(articles, products));
+
   return (
     <>
       <SEO />
-      <Articles articles={articles} />
+      <Grid list={list} />
     </>
   );
 }
 
 export const pageQuery = graphql`
   query {
-    allContentfulBlogPost {
+    articles: allShopifyArticle {
       nodes {
+        handle
+        publishedAt
         title
-        tags
-        slug
-        id
-        contentful_id
-        updatedAt
+        contentHtml
+        gatsbyPath(filePath: "/blog/{shopifyArticle.handle}")
         image {
-          description
-          fluid {
-            ...GatsbyContentfulFluid_withWebp
-          }
+          src
+        }
+      }
+    }
+    products: allShopifyProduct {
+      nodes {
+        id
+        handle
+        description
+        availableForSale
+        tags
+        title
+        gatsbyPath(filePath: "/products/{shopifyProduct.handle}")
+        variants {
+          price
+          title
+        }
+        productType
+        images {
+          originalSrc
         }
       }
     }

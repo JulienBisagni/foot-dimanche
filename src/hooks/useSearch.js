@@ -33,7 +33,7 @@ export const useSearch = (initialList = []) => {
   useEffect(() => {
     const isQueryInTitle = (title) => title.toLowerCase().includes(query);
     const isQueryInTags = (tags) =>
-      tags.some((tag) => tag.toLowerCase().includes(query));
+      tags?.some((tag) => tag.toLowerCase().includes(query));
     const filterList = () => {
       !query
         ? setList(initialList)

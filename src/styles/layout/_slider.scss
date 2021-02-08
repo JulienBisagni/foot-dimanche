@@ -1,0 +1,17 @@
+.slider {
+    &.--bottom-10 {
+        .slider-pagination-container {
+            bottom: -$gutter-size/3 !important;
+        }
+    }
+    &.--bottom-20 {
+        .slider-pagination-container {
+            bottom: -$gutter-size/1.5 !important;
+        }
+    }
+    &.--bottom-30 {
+        .slider-pagination-container {
+            bottom: -$gutter-size !important;
+        }
+    }
+}

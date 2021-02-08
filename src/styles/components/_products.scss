@@ -1,0 +1,33 @@
+.products {
+    @include grid($justify-items: center);
+    grid-template-columns: repeat(auto-fill, minmax($width-card, 1fr));
+}
+
+.product {
+    @include grid($align-items: stretch);
+    grid-template-columns: repeat(2, 50%);
+    &__cta {
+        grid-column: 1 / span 2;
+        width: 100%;
+        @include flexbox($justify-content: center);
+    }
+    &__header {
+        margin-bottom: $gutter-size/2;
+    }
+    &__title {
+        font-size: $font-size-card-title;
+        margin-bottom: $gutter-size/2;
+    }
+    &__price {
+        font-size: $font-size-card-title;
+        background-color: $color-2;
+        padding: $gutter-size/6 $gutter-size/4;
+        border-radius: $border-radius-button;
+        color: $color-1;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    .input-quantity {
+        margin: 0 $gutter-size/2;
+    }
+}

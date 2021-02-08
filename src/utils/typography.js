@@ -1,24 +1,30 @@
 import Typography from 'typography';
 import variables from '../styles/abstracts/_variables.scss';
 
+const fontFamilyHeader = 'Rubik';
+const fontFamilyBody = 'Karla';
+
 const typography = new Typography({
   baseFontSize: '10px',
-  headerFontFamily: ['Rubik', 'sans-serif'],
-  bodyFontFamily: ['Karla', 'sans-serif'],
+  headerFontFamily: [fontFamilyHeader, 'sans-serif'],
+  bodyFontFamily: [fontFamilyBody, 'sans-serif'],
   headerWeight: 700,
   googleFonts: [
     {
-      name: 'Rubik',
+      name: fontFamilyHeader,
       styles: ['700', '400'],
     },
     {
-      name: 'Karla',
+      name: fontFamilyBody,
       styles: ['700', '400'],
     },
   ],
   overrideThemeStyles: ({ rhythm }, options, styles) => ({
     body: { fontSize: variables.fontSizeParagraph, color: variables.colorText },
-    p: { fontSize: variables.fontSizeParagraph, lineHeight: 1.1 },
+    p: {
+      fontSize: variables.fontSizeParagraph,
+      lineHeight: 1.3,
+    },
     h1: {
       fontSize: variables.fontSizeTitle,
     },
@@ -35,6 +41,9 @@ const typography = new Typography({
     a: {
       textDecoration: 'none',
       fontWeight: 700,
+    },
+    select: {
+      fontFamily: fontFamilyBody,
     },
   }),
 });

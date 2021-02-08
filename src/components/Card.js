@@ -1,28 +1,22 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
 
 import loadable from '@loadable/component';
 
 const Tag = loadable(() => import('./Tag'));
+const Image = loadable(() => import('./Image'));
 
-export default function Card({ data }) {
+export default function Card({ img, tags = [], title, linkTo = '/' }) {
   return (
-    <Link to='/' className='card'>
-      {data.image && (
-        <Img
-          fluid={data.image.fluid}
-          alt={data.image?.description}
-          className='card__image'
-        />
-      )}
+    <Link to={linkTo} className='card'>
+      <Image img={img} additionalClassNames='card__image' />
       <div className='card__content'>
         <div className='card__tags tags'>
-          {data.tags.map((tag) => (
+          {tags?.slice(0, 3).map((tag) => (
             <Tag key={tag} tag={tag} />
           ))}
         </div>
-        <div className='card__title'>{data.title}</div>
+        <div className='card__title'>{title}</div>
       </div>
     </Link>
   );

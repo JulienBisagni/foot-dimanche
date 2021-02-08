@@ -12,6 +12,58 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-source-shopify`,
+      options: {
+        shopName: process.env.SHOPIFY_SHOP_NAME,
+        accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
+        downloadImages: false,
+        paginationSize: 10,
+        shopifyQueries: {
+          products: `
+            query GetProducts($first: Int!, $after: String) {
+              products(first: $first, after: $after, sortKey: CREATED_AT, reverse: true) {
+                edges {
+                  node {
+                    id
+                    updatedAt
+                    title
+                    description
+                    handle
+                    availableForSale
+                    productType
+                    vendor
+                    tags
+                    images (first: 250){
+                      edges{
+                        node{
+                          id
+                          altText
+                          originalSrc
+                        }
+                      }
+                    }
+                    variants (first: 250) {
+                      edges {
+                        node {
+                          id
+                          title
+                          price
+                          selectedOptions{
+                            name
+                            value
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          `,
+        },
+      },
+    },
+    {
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: process.env.CONTENTFUL_SPACE_ID,
@@ -20,16 +72,9 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-shopify-storefront',
+      resolve: 'gatsby-plugin-preconnect',
       options: {
-        // Your Shopify instance name (e.g. 'shopify-store-name',
-        // if your shopify shop is located at https://shopify-store-name.myshopify.com/)
-        siteName: process.env.SHOPIFY_SHOP_NAME,
-        // Your Shopify Storefront API access token
-        // generated in the private apps section of your store admin.
-        // Refer to Shopify's Storefront API Documentation for more information
-        // https://help.shopify.com/api/storefront-api/getting-started
-        accessToken: process.env.SHOPIFY_ACCESS_TOKEN,
+        domains: ['https://app.snipcart.com', 'https://cdn.snipcart.com'],
       },
     },
     `gatsby-plugin-scroll-reveal`,
@@ -78,13 +123,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: 'posts',
-        path: `${__dirname}/content/posts/`,
-      },
-    },
     {
       resolve: `gatsby-transformer-remark`,
       options: {

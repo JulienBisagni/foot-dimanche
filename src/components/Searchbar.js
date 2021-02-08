@@ -16,7 +16,7 @@ export default function Searchbar() {
 
   const handleClick = () => {
     handleClickSearch();
-    if (expanded) {
+    if (!expanded) {
       inputRef.current.focus();
     }
   };

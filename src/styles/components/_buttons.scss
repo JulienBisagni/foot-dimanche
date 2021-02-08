@@ -41,13 +41,13 @@ Button {
     }
 
     &.--primary {
+        color: $color-2;
         background-color: $color-1;
-        color: $color-1;
     }
 
     &.--secondary {
         color: $color-1;
-        background: $color-1;
+        background: $color-2;
     }
 
     &.--disabled {
@@ -85,6 +85,7 @@ Button {
     }
 
     &.--icon {
+        display: flex;
         padding: 0;
         box-shadow: none;
         margin-left: $gutter-size/6;

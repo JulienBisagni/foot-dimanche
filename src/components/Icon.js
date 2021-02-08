@@ -17,6 +17,11 @@ import {
   MdCheckCircle,
   MdClose,
   MdReorder,
+  MdRemoveShoppingCart,
+  MdAdd,
+  MdRemove,
+  MdDelete,
+  MdShoppingCart,
 } from 'react-icons/md';
 
 export default function Cart({ icon, additionalClassName }) {
@@ -55,6 +60,16 @@ export default function Cart({ icon, additionalClassName }) {
       return <MdClose className={`icon ${additionalClassName}`} />;
     case 'reorder':
       return <MdReorder className={`icon ${additionalClassName}`} />;
+    case 'remove_shopping_cart':
+      return <MdRemoveShoppingCart className={`icon ${additionalClassName}`} />;
+    case 'add':
+      return <MdAdd className={`icon ${additionalClassName}`} />;
+    case 'remove':
+      return <MdRemove className={`icon ${additionalClassName}`} />;
+    case 'delete':
+      return <MdDelete className={`icon ${additionalClassName}`} />;
+    case 'shopping_card':
+      return <MdShoppingCart className={`icon ${additionalClassName}`} />;
     default:
       return <MdInfo className={`icon ${additionalClassName}`} />;
   }

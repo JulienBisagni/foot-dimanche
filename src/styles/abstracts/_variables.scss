@@ -2,6 +2,7 @@
 $color-1: #ffffff;
 $color-2: #111111;
 $color-3: #f9dc5c;
+$color-4: #f8f9fa;
 $color-text: #2b2d42;
 
 $color-1-100: $color-1;
@@ -14,8 +15,9 @@ $color-text-light: rgba($color-text, 0.25);
 $gutter-size: 3.2rem;
 
 $width-container: 80rem;
-$width-card: 15rem;
+$width-card: 20rem;
 $width-logo: 4rem;
+$width-cart-item: 4rem;
 $width-button: 14rem;
 
 $height-card: 30rem;
@@ -40,6 +42,7 @@ $font-weight-bold: 700;
 // Z-INDEXES
 $z-index-navbar: 2;
 $z-index-button-scroll-to-top: 3;
+$z-index-cart: 4;
 
 // BORDERS && BOX SHADOWS
 $border-radius-button: 0.4rem;
@@ -55,6 +58,7 @@ $box-shadow-multicolor: $color-2-100 0px 0px 0px 2px inset, rgb(255, 255, 255) 1
 
 // OPACITY
 $opacity-hover: 0.8;
+$opacity-cart: 0.95;
 
 // ANIMATIONS
 $anim-curve: ease-in;
@@ -63,8 +67,8 @@ $anim-time: 0.2s;
 // **********************************************
 // *                FILTERS                     *
 // **********************************************
-$brightness-darker-soft: 0.6;
-$brightness-darker-hard: 0.8;
+$brightness-darker-soft: 0.8;
+$brightness-darker-hard: 0.6;
 
 // **********************************************
 // *                BREAKPOINTS                 *

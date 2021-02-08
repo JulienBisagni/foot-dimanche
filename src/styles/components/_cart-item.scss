@@ -1,0 +1,24 @@
+.cart-item {
+    background-color: $color-1;
+    padding: $gutter-size/3;
+    margin-bottom: $gutter-size/2;
+    @include flexbox($justify-content: space-between);
+    border-radius: $border-radius-card;
+    &__image {
+        width: $width-cart-item;
+        display: flex;
+        margin-right: $gutter-size/2;
+        .img {
+            border-radius: $border-radius-card;
+        }
+    }
+    &__info-container {
+        display: flex;
+    }
+    &__quantity-container {
+        @include flexbox($flex-direction: column);
+    }
+    &__info {
+        margin-bottom: $gutter-size/6;
+    }
+}

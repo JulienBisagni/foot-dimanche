@@ -4,14 +4,14 @@
     position: relative;
     height: $height-card;
     width: $width-card;
-    background-color: $color-2;
+    background-color: $color-1;
     box-shadow: $box-shadow-container;
     color: $color-text;
     font-size: $font-size-card;
     &__content {
-        @include position-absolute(unset, unset, 0, 0);
+        @include position-absolute(0, unset, unset, 0);
         padding: $gutter-size/3;
-        padding-bottom: $gutter-size;
+        padding-top: $gutter-size * 2;
     }
     &__title {
         font-weight: bold;
@@ -20,16 +20,17 @@
     }
     &__tags {
         @extend %transition;
-        transform: translate(-100%);
+        transform: translate(-150%);
     }
     &__image {
         @extend %border-radius;
-        filter: brightness($brightness-darker-hard);
+        filter: brightness($brightness-darker-soft);
         height: 100%;
+        object-fit: cover;
     }
     &:hover {
         .card__image {
-            filter: brightness($brightness-darker-soft);
+            filter: brightness($brightness-darker-hard);
         }
         .card__tags {
             transform: translate(0);

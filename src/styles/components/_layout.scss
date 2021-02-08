@@ -3,15 +3,20 @@
 }
 
 .container {
-    width: $width-container;
+    max-width: $width-container;
+    width: auto;
     margin: 0 auto;
     box-shadow: $box-shadow-container;
     padding: $gutter-size;
+    margin-bottom: $gutter-size;
+    border-radius: $border-radius-container;
     &.--main {
         @extend %border-radius;
         background-color: $color-2-5;
         margin-top: calc(#{$height-navbar} + #{$gutter-size});
-        height: 100vh;
-        overflow: auto;
+        min-height: 100vh;
+    }
+    &.--primary {
+        background-color: $color-1;
     }
 }

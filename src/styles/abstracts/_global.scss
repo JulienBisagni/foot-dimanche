@@ -1,9 +1,0 @@
-.clickable-element {
-    @extend %transition;
-    &:hover {
-        opacity: $opacity-hover;
-    }
-    &:active {
-        transform: translateY(1px);
-    }
-}

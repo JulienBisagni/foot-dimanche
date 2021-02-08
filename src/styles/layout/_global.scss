@@ -1,0 +1,27 @@
+* {
+    outline: 0;
+}
+
+body {
+    word-wrap: break-word;
+    font-kerning: normal;
+}
+
+img,
+iframe {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 0;
+    object-fit: contain;
+}
+
+.clickable-element {
+    @extend %transition;
+    &:hover {
+        opacity: $opacity-hover;
+    }
+    &:active {
+        transform: translateY(1px);
+    }
+}

@@ -1,0 +1,12 @@
+.input-quantity {
+    @include flexbox();
+    &__icon {
+        background-color: $color-4;
+        border-radius: $border-radius-button;
+        box-shadow: $box-shadow-button;
+    }
+    &__number {
+        margin-left: $gutter-size/6;
+        margin-bottom: 0;
+    }
+}
